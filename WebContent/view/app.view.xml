@@ -6,8 +6,13 @@
 		text="say Hello."
 		press=".onShowHello" />
 	<Input
-      value="{one>/rootKey/childKey}"
-      description="Hello {one>/rootKey/childKey}"
-      valueLiveUpdate="true"
-      width="60%"/>
+		value="{one>/rootKey/childKey}"
+		description="Hello {one>/rootKey/childKey}"
+		valueLiveUpdate="true"
+		width="60%" />
+	<Input
+		value="{two>/rootKey/childKey}"
+		description="Hello {two>/rootKey/childKey}"
+		valueLiveUpdate="true"
+		width="60%" />	
 </mvc:View>
