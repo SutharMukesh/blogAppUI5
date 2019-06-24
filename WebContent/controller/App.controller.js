@@ -13,40 +13,38 @@ sap.ui.define([
 	// 	text:"Hellow World..."
 	// }).placeAt("content")
 
-	XMLView.create({
-		viewName: "sap.ui.demo.walkthrough.view.app"
-	}).then((oView) => {
-		oView.placeAt("content")
-	})
+	// XMLView.create({
+	// 	viewName: "sap.ui.demo.walkthrough.view.app"
+	// }).then((oView) => {
+	// 	oView.placeAt("content")
+	// })
 
 	return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
-		onInit: function () {
-			let oData = {
-				oDataSample1: {
-					rootKey: {
-						childKey: "First Child Value"
-					}
-				},
-				oDataSample2: {
-					rootKey: {
-						childKey: "Second Child Value"
-					}
-				}
+		// onInit: function () {
+		// 	let oData = {
+		// 		oDataSample1: {
+		// 			rootKey: {
+		// 				childKey: "First Child Value"
+		// 			}
+		// 		},
+		// 		oDataSample2: {
+		// 			rootKey: {
+		// 				childKey: "Second Child Value"
+		// 			}
+		// 		}
+		// 	};
 
-			};
-		
+		// 	let oModel1 = new JSONModel(oData.oDataSample1);
+		// 	this.getView().setModel(oModel1, "one");
 
-			let oModel1 = new JSONModel(oData.oDataSample1);
-			this.getView().setModel(oModel1, "one");
+		// 	let oModel2 = new JSONModel(oData.oDataSample2);
+		// 	this.getView().setModel(oModel2, "two");
 
-			let oModel2 = new JSONModel(oData.oDataSample2);
-			this.getView().setModel(oModel2, "two");
-
-			let i18nModel = new ResourceModel({
-				bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
-			});
-			this.getView().setModel(i18nModel, "i18n");
-		},
+		// 	let i18nModel = new ResourceModel({
+		// 		bundleName: "sap.ui.demo.walkthrough.i18n.i18n"
+		// 	});
+		// 	this.getView().setModel(i18nModel, "i18n");
+		// },
 		onShowHello: function () {
 			// alert("HELLLO World!")
 			// let msg = this.getView().getModel("one").getProperty("/rootKey/childKey")
