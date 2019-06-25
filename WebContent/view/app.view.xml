@@ -1,18 +1,17 @@
 <mvc:View
 	controllerName="sap.ui.demo.walkthrough.controller.App"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Button
-		text="say Hello."
-		press=".onShowHello" />
-	<Input
-		value="{one>/rootKey/childKey}"
-		description="Hello {one>/rootKey/childKey}"
-		valueLiveUpdate="true"
-		width="60%" />
-	<Input
-		value="{two>/rootKey/childKey}"
-		description="Hello {two>/rootKey/childKey}"
-		valueLiveUpdate="true"
-		width="60%" />	
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<Shell>
+		<App>
+			<pages>
+				<Page title="{i18n>appTitle}">
+					<content>
+						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.sampleText"/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>
