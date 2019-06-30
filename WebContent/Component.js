@@ -29,6 +29,9 @@ sap.ui.define([
 
 				let oModel2 = new JSONModel(oData.oDataSample2);
 				this.setModel(oModel2, "two");
+				
+				let oInvoice = new JSONModel("./model/invoice.json")
+				this.setModel(oInvoice,"invoice");
 			}
 		})
 	})
