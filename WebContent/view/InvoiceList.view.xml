@@ -3,10 +3,19 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	controllerName="sap.ui.demo.walkthrough.controller.Invoice">
 	<List
-		headerText="Sample List"
 		class="sapUiResponsiveMargin"
 		width="auto"
+		id="invoiceList"
 		items="{invoice>/Invoices}">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="sampleList" />
+				<ToolbarSpacer />
+				<SearchField
+					width="50%"
+					search=".onFilterEvent" />
+			</Toolbar>
+		</headerToolbar>
 		<items>
 			<ObjectListItem
 				title="{invoice>Quantity} x {invoice>ProductName}"
@@ -17,8 +26,16 @@
 							showMeasure: false
 						}
 					}"
-				numberUnit="{curr>/currency}" 
-				numberState="{=${invoice>ExtendedPrice} >50?'Error':'Success'}"/>
+				numberUnit="{curr>/currency}"
+				numberState="{=${invoice>ExtendedPrice} >50?'Error':'Success'}">
+				<firstStatus>
+					<ObjectStatus
+						text="{
+							path:'invoice>Status',
+							formatter:'.formatter.statusText'
+						}" />
+				</firstStatus>
+			</ObjectListItem>
 		</items>
 	</List>
 </mvc:View>
