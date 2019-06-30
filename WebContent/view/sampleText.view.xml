@@ -29,5 +29,13 @@
 				valueLiveUpdate="true"
 				width="80%" />
 		</Panel>
+		<Panel>
+			<Button
+				id="helloDialogButton"
+				icon="sap-icon://world"
+				text="{i18n>openDialogButtonText}"
+				press=".onOpenDialog"
+				class="sapUiSmallMargin" />
+		</Panel>
 	</Panel>
 </mvc:View>

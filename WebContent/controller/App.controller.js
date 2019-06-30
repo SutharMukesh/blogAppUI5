@@ -24,4 +24,4 @@ sap.ui.define([
 
 
 // What is XMLView and Controller
-// What is Difference between XMLView and Controller
+// what is difference between xmlview and controller
