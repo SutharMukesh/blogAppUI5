@@ -1,6 +1,7 @@
 <mvc:View
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="sap.ui.demo.walkthrough.controller.Invoice">
 	<List
 		headerText="Sample List"
 		class="sapUiResponsiveMargin"
@@ -8,7 +9,15 @@
 		items="{invoice>/Invoices}">
 		<items>
 			<ObjectListItem
-				title="{invoice>Quantity} x {invoice>ProductName}" />
+				title="{invoice>Quantity} x {invoice>ProductName}"
+				number="{
+						parts:[{path: 'invoice>ExtendedPrice'}, {path: 'curr>/currency'}],
+						type:'sap.ui.model.type.Currency',
+						formatOptions: {
+							showMeasure: false
+						}
+					}"
+				numberUnit="{curr>/currency}" />
 		</items>
 	</List>
 </mvc:View>

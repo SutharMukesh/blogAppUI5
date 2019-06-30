@@ -5,19 +5,6 @@ sap.ui.define([
 	'use strict';
 	return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
 
-		// onShowHelloOne: function () {
-		// 	let oBundle = this.getView().getModel("i18n").getResourceBundle();
-		// 	let recipient = this.getView().getModel("one").getProperty("/rootKey/childKey")
-		// 	let msg = oBundle.getText("helloMsg", [recipient])
-		// 	MessageToast.show(msg)
-		// },
-		// onShowHelloTwo: function () {
-		// 	let oBundle = this.getView().getModel("i18n").getResourceBundle();
-		// 	let recipient = this.getView().getModel("two").getProperty("/rootKey/childKey")
-		// 	let msg = oBundle.getText("helloMsg", [recipient])
-		// 	MessageToast.show(msg)
-		// }
-
 	})
 });
 
