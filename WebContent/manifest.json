@@ -38,10 +38,42 @@
 					"bundleName": "sap.ui.demo.walkthrough.i18n.i18n"
 				}
 			},
-			"invoice":{
-				"type":"sap.ui.model.json.JSONModel",
-				"uri":"./models/invoice.json"
+			"invoice": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "./models/invoice.json"
 			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui.demo.walkthrough.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [{
+					"pattern": "",
+					"name": "overview",
+					"target": "overview"
+				},
+				{
+					"pattern": "detail",
+					"name": "detail",
+					"target": "detail"
+				}
+			],
+			"targets": {
+				"overview": {
+					"viewId": "overview",
+					"viewName": "Overview"
+				},
+				"detail": {
+					"viewId": "detail",
+					"viewName": "Detail"
+				}
+			}
+
 		}
 	}
 }

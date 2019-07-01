@@ -15,15 +15,19 @@ sap.ui.define([
 			this.getView().setModel(oCurrModel, "curr")
 		},
 		onFilterEvent: function (event) {
-			var a=[]
+			var a = []
 			var sQuery = event.getParameter("query");
-			if(sQuery){
-				a.push(new Filter("ProductName",FilterOperator.Contains,sQuery));
+			if (sQuery) {
+				a.push(new Filter("ProductName", FilterOperator.Contains, sQuery));
 			}
-			
-			var oBinding =this.byId("invoiceList").getBinding("items");	
+
+			var oBinding = this.byId("invoiceList").getBinding("items");
 			debugger;
 			oBinding.filter(a);
+		},
+		onPress: function (evt) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("detail");
 		}
 	})
 });

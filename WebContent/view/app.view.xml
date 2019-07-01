@@ -6,16 +6,7 @@
 	<Page>
 		<content>
 			<Shell>
-				<App>
-					<pages>
-						<Page title="{i18n>appTitle}">
-							<content>
-								<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.sampleText" />
-								<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.InvoiceList" />	
-							</content>
-						</Page>
-					</pages>
-				</App>
+				<App class="blogApp" id="app"/>
 			</Shell>
 		</content>
 	</Page>
