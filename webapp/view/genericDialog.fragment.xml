@@ -1,0 +1,20 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog
+		id="genericDialog"
+		title="{two>/rootKey/childKey}">
+		<content>
+			<core:Icon
+				src="sap-icon://hello-world"
+				size="8rem"
+				class="sapUiMediumMargin" />
+		</content>
+		<beginButton>
+			<Button
+				text="close"
+				icon="sap-icon://world"
+				press=".onCloseDialog" />
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>
